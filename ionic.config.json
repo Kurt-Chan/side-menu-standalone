@@ -1,0 +1,7 @@
+{
+  "name": "side-menu-standalone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
