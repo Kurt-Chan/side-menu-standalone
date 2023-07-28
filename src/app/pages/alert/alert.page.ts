@@ -12,10 +12,20 @@ import { AlertController } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class AlertPage implements OnInit {
+  isAlertOpen = false;
+  public alertButtons = ['OK'];
+  handlerMessage = '';
+  roleMessage = '';
+
 
   constructor(private alertController: AlertController) { }
 
   ngOnInit() {
+  }
+
+
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
   }
 
 
@@ -28,6 +38,70 @@ export class AlertPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+    public alertButtons4 = ['OK'];
+  public alertInputs1 = [
+    {
+      label: 'Red',
+      type: 'radio',
+      value: 'red',
+    },
+    {
+      label: 'Blue',
+      type: 'radio',
+      value: 'blue',
+    },
+    {
+      label: 'Green',
+      type: 'radio',
+      value: 'green',
+    },
+  ];
+
+    public alertButtons3 = ['OK'];
+  public alertInputs = [
+    {
+      placeholder: 'Name',
+    },
+    {
+      placeholder: 'Nickname (max 8 characters)',
+      attributes: {
+        maxlength: 8,
+      },
+    },
+    {
+      type: 'number',
+      placeholder: 'Age',
+      min: 1,
+      max: 100,
+    },
+    {
+      type: 'textarea',
+      placeholder: 'A little about yourself',
+    },
+  ];
+
+
+  public alertButtons2 = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      handler: () => {
+        this.handlerMessage = 'Alert canceled';
+      },
+    },
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        this.handlerMessage = 'Alert confirmed';
+      },
+    },
+  ];
+
+  setResult(ev: any) {
+    this.roleMessage = `Dismissed with role: ${ev.detail.role}`;
   }
 
 }
