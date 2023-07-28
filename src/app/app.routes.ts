@@ -26,5 +26,13 @@ export const routes: Routes = [
   {
     path: 'alert',
     loadComponent: () => import('./pages/alert/alert.page').then( m => m.AlertPage)
+  },  {
+    path: 'badge',
+    loadComponent: () => import('./pages/badge/badge.page').then( m => m.BadgePage)
   },
+  {
+    path: 'breadcrumbs',
+    loadComponent: () => import('./pages/breadcrumbs/breadcrumbs.page').then( m => m.BreadcrumbsPage)
+  },
+
 ];
