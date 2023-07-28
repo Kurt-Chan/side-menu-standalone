@@ -34,5 +34,9 @@ export const routes: Routes = [
     path: 'breadcrumbs',
     loadComponent: () => import('./pages/breadcrumbs/breadcrumbs.page').then( m => m.BreadcrumbsPage)
   },
+  {
+    path: 'cards',
+    loadComponent: () => import('./pages/cards/cards.page').then( m => m.CardsPage)
+  },
 
 ];
