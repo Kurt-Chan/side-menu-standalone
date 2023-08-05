@@ -38,5 +38,9 @@ export const routes: Routes = [
     path: 'cards',
     loadComponent: () => import('./pages/cards/cards.page').then( m => m.CardsPage)
   },
+  {
+    path: 'accordion',
+    loadComponent: () => import('./pages/accordion/accordion.page').then( m => m.AccordionPage)
+  },
 
 ];
