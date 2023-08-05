@@ -42,5 +42,9 @@ export const routes: Routes = [
     path: 'accordion',
     loadComponent: () => import('./pages/accordion/accordion.page').then( m => m.AccordionPage)
   },
+  {
+    path: 'datetime',
+    loadComponent: () => import('./pages/datetime/datetime.page').then( m => m.DatetimePage)
+  },
 
 ];
